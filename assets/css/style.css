@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: #031b2d;
+}
+.main-container {
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.7);
+  box-shadow: -7px 27px 33px -7px rgba(255, 255, 255, 0.6);
+  -webkit-box-shadow: -7px 27px 33px -7px rgba(255, 255, 255, 0.6);
+  -moz-box-shadow: -7px 27px 33px -7px rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+}
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #9261ee;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right bottom,
+    rgb(145, 77, 218),
+    rgb(108, 175, 226)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to right bottom,
+    rgb(169, 74, 210),
+    rgb(118, 196, 233)
+  );
+}
+
+.contenedor-img {
+  background: rgb(204, 158, 214);
+  background: radial-gradient(
+    circle,
+    rgba(204, 158, 214, 1) 36%,
+    rgba(104, 141, 214, 0.8346988453584558) 78%
+  );
+  height: 90px;
+  width: 300px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+img {
+  height: 60px;
+  width: 70px;
+}
+.contenedor {
+  color: white;
+  background-color: #031b2d;
+  border-radius: 10px;
+}
+#google-btn {
+  color: white;
+  background-color: #031b2d;
+  border: none;
+}
+#github-btn {
+  color: white;
+  background-color: #031b2d;
+  border: none;
+}
+.custom-icon {
+  font-size: 35px;
+}
+.btn-custom {
+  background: rgb(204, 158, 214);
+  background: radial-gradient(
+    circle,
+    rgba(204, 158, 214, 1) 36%,
+    rgba(104, 141, 214, 0.8346988453584558) 78%
+  );
+  width: 150px;
+}
+.login {
+  font-size: 20px;
+}
+
+#signup-form {
+  display: none;
+}
+
+a {
+  color: rgb(46, 147, 230);
+  text-decoration: none;
+}
+
+#register-button {
+  color: rgb(46, 147, 230);
+  border: none;
+  background-color: #031b2d;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .main-container {
+    display: flex;
+    border-radius: 0px;
+    height: 80vh;
+  }
+  .contenedor-img {
+    width: 300px;
+    height: 100%;
+  }
+  img {
+    width: 120px;
+    height: auto;
+  }
+  .contenedor {
+    width: 300px;
+    height: 550px;
+  }
+  .custom-icon {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .main-container {
+    display: flex;
+    border-radius: 0px;
+    height: 80vh;
+  }
+  .contenedor-img {
+    width: 350px;
+    height: 100%;
+  }
+  img {
+    width: 120px;
+    height: auto;
+  }
+  .contenedor {
+    width: 350px;
+  }
+}

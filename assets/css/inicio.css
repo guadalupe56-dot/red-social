@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: #031b2d;
+  font-size: 19px; /* Ajustado para pantallas más pequeñas */
+}
+
+.navbar {
+  background: rgb(204, 158, 214);
+  background: radial-gradient(
+    circle,
+    rgba(204, 158, 214, 1) 36%,
+    rgba(104, 141, 214, 0.8346988453584558) 78%
+  );
+}
+
+/* Contenedor principal */
+.principal {
+  width: 100%; /* Ajuste a 100% para mayor flexibilidad */
+  max-width: 1400px; /* Máximo ancho para pantallas grandes */
+}
+
+/* Perfil lateral */
+.perfil {
+  background-color: #e6e6e6;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.perfil #joined-date {
+  font-size: 12px;
+}
+
+.perfil-info .avatar {
+  width: 80px; /* Tamaño de avatar más pequeño */
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Botones personalizados */
+.boton-personalizado {
+  background: rgb(204, 158, 214);
+  background: radial-gradient(
+    circle,
+    rgba(204, 158, 214, 1) 36%,
+    rgba(104, 141, 214, 0.8346988453584558) 78%
+  );
+  color: #f2f2f2;
+  border: none;
+  padding: 8px 12px; /* Ajustes en el espaciado */
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.boton-personalizado:hover {
+  background-color: #6d5ad6;
+}
+
+.crear-pub {
+  background-color: #e6e6e6;
+}
+
+/* Campo de texto */
+.campo-texto {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d7cff8;
+  border-radius: 8px;
+}
+
+/* Opciones del menú */
+.opciones-menu {
+  list-style: none;
+  background-color: #e6e6e6;
+  padding: 0;
+  margin: 0;
+  border-radius: 6px;
+  position: absolute;
+  display: none;
+}
+
+.boton-opciones:hover + .opciones-menu,
+.opciones-menu:hover {
+  display: block;
+}
+
+.opcion {
+  padding: 10px;
+  color: #5f3bb6;
+  border: none;
+}
+
+.opcion.eliminar {
+  background-color: #e6e6e6;
+  color: #d9534f;
+  border: none;
+}
+
+.interaction-buttons {
+  padding-bottom: 15px;
+  padding-left: 10px;
+}
+
+/* Estilos para los botones de interacción */
+.interaction-buttons button {
+  background-color: transparent;
+  border: none;
+  color: #007bff; /* Color de los iconos */
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.interaction-buttons button:hover {
+  color: #6200b3; /* Color al pasar el ratón por encima */
+}
+
+/* Estilos para el contador de likes */
+.like-counter {
+  margin-left: 0.5rem;
+  font-size: 1.25rem;
+}
+
+/* Cuando el like está activo */
+.btn-like.active {
+  color: #ff0000; /* Cambia a rojo cuando se activa */
+}
+
+.comments-section {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #ededed;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para cada comentario */
+.comment {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  padding: 12px;
+  background-color: #ededed;
+  border-radius: 8px;
+  border: 1px solid #d7cff8;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.comment:hover {
+  background-color: #e8f0fe;
+  transform: translateY(-2px);
+}
+
+/* Estilos para la imagen de perfil */
+.foto-perfil {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px; /* Ajuste del margen */
+  border: 2px solid #5f3bb6;
+}
+
+.card-contenido {
+  margin-top: 15px;
+}
+
+/* Estilo para el texto del comentario */
+.comment p {
+  margin: 0;
+  font-size: 16px; /* Ajustado */
+  color: #333;
+}
+
+.comment strong {
+  font-weight: bold;
+}
+
+.comment span {
+  font-size: 12px;
+  color: #888;
+  margin-left: 8px;
+}
+
+/* Estilo para el campo de entrada y botón de comentario */
+.comment-input {
+  width: calc(100% - 90px);
+  padding: 10px;
+  border: 1px solid #d7cff8;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+/* Estilo para el botón de enviar comentario */
+.btn-submit-comment {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5f3bb6;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-submit-comment:hover {
+  background-color: #6d5ad6;
+  transform: scale(1.05);
+}
+
+/* Estilos de las publicaciones */
+.publicaciones {
+  background-color: #e6e6e6;
+  border-radius: 10px;
+}
+
+.titulo-card {
+  color: #5f3bb6;
+}
+
+.contenido-publicacion {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: bolder;
+}
+.contenido-publicacion-desc {
+  margin-top: 18px;
+  font-size: 18px;
+}
+
+.fecha-publicacion {
+  color: #342f41;
+  font-size: 13px;
+}
+
+.contenido-publicacion {
+  color: #4a4a4a;
+}
+
+.img-logo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+/* estilos de alerta */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+}
+
+.modal-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-modal-cancel {
+  background-color: gray;
+  color: white;
+}
+
+.btn-modal-delete {
+  background-color: red;
+  color: white;
+}
+/* editar */
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #e6e6e6;
+}
+
+.edit-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.edit-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.edit-form .btn-guardar-cambios {
+  padding: 10px;
+  background: rgb(204, 158, 214);
+  background: radial-gradient(
+    circle,
+    rgba(204, 158, 214, 1) 36%,
+    rgba(104, 141, 214, 0.8346988453584558) 78%
+  );
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.edit-form .btn-cancelar-edicion {
+  padding: 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.edit-form .btn-guardar-cambios:hover {
+  background-color: #218838;
+}
+
+.edit-form .btn-cancelar-edicion:hover {
+  background-color: #c82333;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  .principal {
+    width: 100%;
+    padding: 12px;
+  }
+
+  body {
+    font-size: 19px; /* Ajustar tamaño base */
+  }
+
+  .perfil {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .foto-perfil {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar {
+    padding: 12px;
+  }
+
+  body {
+    font-size: 10px;
+  }
+
+  .comment {
+    flex-direction: column; /* Cambiar a columna para más espacio */
+    align-items: flex-start;
+    padding: 10px; /* Reducir padding */
+  }
+
+  .comment p {
+    font-size: 14px; /* Ajustar el tamaño del texto */
+  }
+
+  .comment-input {
+    font-size: 16px; /* Tamaño del campo de entrada */
+  }
+
+  .btn-submit-comment {
+    font-size: 14px; /* Ajustar tamaño del botón */
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 10px; /* Tamaño más pequeño para pantallas pequeñas */
+  }
+
+  .perfil-lateral {
+    flex-direction: column;
+  }
+
+  .perfil {
+    width: 100%;
+    height: 20em;
+  }
+
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  .campo-texto {
+    font-size: 14px;
+  }
+
+  .boton-personalizado {
+    padding: 8px;
+  }
+
+  .comment {
+    padding: 8px; /* Reducir padding */
+  }
+
+  .comment-input {
+    font-size: 14px; /* Tamaño del campo de entrada */
+  }
+
+  .btn-submit-comment {
+    padding: 8px 10px; /* Ajustar tamaño del botón */
+  }
+
+  .contenido-publicacion-desc {
+    margin-top: 18px;
+    font-size: 14px;
+  }
+}
